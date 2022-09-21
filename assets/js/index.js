@@ -1,31 +1,9 @@
 "use strict";
 
-let str = 'test test test testlist test test test';
-
-function getQuantity (str){
-    const words = str.split(' ');
-    let result = 0;
-    for (let i = 0; i < words.length; i++){        
-        if (words [i] != ' '){
-            result += 1
-        }
+function factorial(num){
+    if(num === 0 ){
+        return 1;
     }
-    return result; 
+    return num * factorial(num - 1) 
 }
-console.log(getQuantity(str));
-
-
-function getLongWord (str){
-
-    const longWord = str.split(' ');
-    let wordLength = 0;
-    let result;
-    for( let i = 0; i < longWord.length; i++ ){
-        wordLength = longWord.length;
-        if(longWord[i].length > wordLength){
-            result= longWord[i];            
-        }
-    }
-    return result;
-}
-console.log(getLongWord(str));
+console.log(factorial(4));
